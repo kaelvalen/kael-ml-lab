@@ -1,0 +1,93 @@
+# ============================================================
+# D2L Project .gitignore
+# ============================================================
+
+# -------------------- Python --------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# -------------------- Jupyter --------------------
+.ipynb_checkpoints/
+*.ipynb_metadata/
+*.nbconvert.*
+
+# -------------------- C++ / CUDA --------------------
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.dSYM/
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile.cmake
+compile_commands.json
+
+# -------------------- IDE --------------------
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# -------------------- Data --------------------
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+*.csv
+*.tsv
+*.h5
+*.hdf5
+*.parquet
+*.pkl
+*.pickle
+
+# -------------------- Model artifacts --------------------
+checkpoints/
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+
+# -------------------- Logs --------------------
+logs/
+*.log
+wandb/
+mlruns/
+tensorboard/
+
+# -------------------- Misc --------------------
+*.pdf
+*.zip
+*.tar.gz
+*.tar
+.env
+.env.local
