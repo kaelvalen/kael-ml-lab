@@ -9,6 +9,19 @@ description = "Dive into Deep Learning - Özel modüller, C++/CUDA entegrasyonla
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.11"
+authors = [
+    {name = "rei", email = "rei@example.com"}
+]
+keywords = ["deep-learning", "pytorch", "cuda", "d2l"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
 dependencies = [
     "torch>=2.1.0",
     "numpy>=1.24.0",
@@ -21,23 +34,55 @@ dev = [
     "pytest>=7.4.0",
     "pytest-cov>=4.1.0",
     "jupyterlab>=4.0.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
 ]
+cuda = [
+    "pybind11>=2.10.0",
+]
+vision = [
+    "torchvision>=0.16.0",
+]
+nlp = [
+    "transformers>=4.30.0",
+    "datasets>=2.12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/rei/d2l"
+Repository = "https://github.com/rei/d2l"
+Documentation = "https://github.com/rei/d2l/docs"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+d2l_custom = ["*.pyi", "py.typed"]
+
 [tool.ruff]
 line-length = 100
 target-version = "py311"
+show-fixes = true
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "I", "N", "UP"]
-ignore = ["E501"]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM"]
+ignore = ["E501", "B008"]
 
 [tool.ruff.format]
 quote-style = "double"
+indent-style = "space"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
-addopts = "-v --tb=short"
+addopts = "-v --tb=short --cov=src --cov-report=term-missing"
