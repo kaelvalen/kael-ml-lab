@@ -93,3 +93,4 @@ tensorboard/
 *.tar
 .env
 .env.local
+.windsurf

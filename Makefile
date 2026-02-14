@@ -61,6 +61,13 @@ clean: cuda-clean ## Tüm build dosyalarını temizle
 	rm -rf build/ dist/
 	@echo "\033[32m✓ Temizlendi\033[0m"
 
+# ── Hızlı Başlangıç ───────────────────────────────────────────
+quick: ## Hızlı başlangıç (notebook + ortam kontrolü)
+	@./scripts/quick-start.sh
+
+workflow: ## Workflow helper script'i
+	@./scripts/workflow-helper.sh help
+
 # ── GPU Bilgisi ────────────────────────────────────────────
 gpu-info: ## GPU bilgisini göster
 	@nvidia-smi 2>/dev/null || echo "nvidia-smi bulunamadı"
