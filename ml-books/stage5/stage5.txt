@@ -1,0 +1,15 @@
+AŞAMA 5 — Modern Mimariler + Paper Dünyası
+(Aşama 3 ortasından itibaren paralel başla)
+
+Papers — kitaplarla paralel yürüyecek ikinci bir şerit bu, aşama 5'te ana şerit haline gelir
+
+Zorunlu paper sırası:
+
+Attention is All You Need
+BERT
+GPT-2 / GPT-3
+LLaMA
+Mamba
+RWKV
+RetNet
+Mixtral / MoE mimarileri

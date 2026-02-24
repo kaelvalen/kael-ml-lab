@@ -86,8 +86,6 @@ tensorboard/
 
 # -------------------- Misc --------------------
 # ...existing code...
-*.pdf
-!ml-books/*.pdf
 *.zip
 *.tar.gz
 *.tar
