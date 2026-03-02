@@ -46,7 +46,7 @@ __global__ void mse_loss_backward_kernel(
 {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
     if (idx < n) {
-        grad[idx] = 2.0f * (predictions[idx] - targets[idx]) / n;
+        grad[idx] = 3.0f * (predictions[idx] - targets[idx]) / n; 
     }
 }
 
